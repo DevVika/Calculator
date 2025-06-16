@@ -7,5 +7,5 @@ Another YT tutorial to help me learn the basics
 
 ## How to run 🔥🔥🔥
 1. Clone this repo:
-   ``bash
+   ```bash
    https://github.com/DevVika/Calculator.git
