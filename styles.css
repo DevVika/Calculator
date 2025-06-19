@@ -1,0 +1,55 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    /* padding and margin 0 make background fill whole screen */
+    padding: 0;
+    margin: 0%;
+    background: linear-gradient(to right, rgb(233, 120, 239),rgb(118, 98, 231));
+}
+
+.calculator-grid {
+    /* aligns everything */
+    display: grid;
+    /* makes the content not stretched */
+    justify-content: center;
+    /* removes any space between content with multiple rows */
+    align-content: center;
+    /* makes it take up the height of the entire screen */
+    min-height: 100vh;
+    /* the columns will repeat, there will  be 4, and will be 100 px wide */
+    grid-template-columns: repeat(4, 100px);
+    /* the row will have a minimum height, but maximum will be auto to fit a large output on screen */
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}   
+
+/* selects all buttons inside the grid */
+.calculator-grid > button {
+    /* makes curor point when hovering */
+    cursor: pointer;
+    /* enlarges buttons */
+    font-size: 2rem;
+    /* gives buttons nice border */
+    border: 1px, solid, white;
+    /* removes default outline */
+    outline: none;
+    /* colors the buttons and then makes them opaque */
+    background-color: rgba(254, 225, 255, 0.75);
+}   
+.calculator-grid > button:hover {
+    background-color: rgba(254, 225, 255, 0.458);
+    transition: 0.6 ease;
+}
+
+.span-two {
+    /* allows AC and = buttons to take up 2x space */
+    grid-column: span 2;
+}
+
+.output {
+    /* makes top section span from the first to last column */
+    grid-column: 1 / -1;
+}
